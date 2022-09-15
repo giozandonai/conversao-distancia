@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  api:
+    image: giozandonai/conversao-distancia:v1
+    build: ./src/
+    ports:
+      - 5000:5000
