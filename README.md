@@ -5,6 +5,7 @@ O projeto conversão de distância é um projeto desenvolvido em Python. O proje
 
 ### Observações do projeto
 A aplicação é exposta usando a porta 5000
+**Kubernetes** Usando o ingress bare metal na porta 80
 
 **srv/Dockerfile**
 ```
@@ -28,11 +29,17 @@ CMD gunicorn --bind 0.0.0.0:5000 app:app
 **Enviando imagem:**
 `$ docker push giozandonai/conversao-distancia:latest`
 
-**Rodando com o compose:**
+**DOCKER COMPOSE**
+'**Rodando com o compose:**
 `$ docker-compose up -d`
 
 **Rodando com o Docker run:**
 `$ docker container run -d --name conversao-distancia -p 5000:5000 giozandonai/conversao-distancia:v1`
 
 **Acessando a aplicação:**
-`http://localhost:5000`
+`http://localhost:5000``
+
+**KUBERNETES**
+Acessar a pasta ./k8s:
+`kubectl apply -f . -R`
+`http://nome_dominio`
