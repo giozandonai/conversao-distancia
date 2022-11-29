@@ -1,0 +1,17 @@
+# Deployment da Aplicação
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: conversao-distancia
+spec:
+  selector:
+    matchLabels:
+      app: conversao-distancia
+  template:
+    metadata:
+      labels:
+        app: conversao-distancia
+    spec:
+      containers:
+        - name: conversao-distancia
+          image: giozandonai/conversao-distancia:v1
