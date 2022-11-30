@@ -4,7 +4,7 @@
 O projeto conversão de distância é um projeto desenvolvido em Python. O projeto tem como objetivo ser um exemplo para a criação de ambiente com containers usando Python.
 
 ### Observações do projeto
-A aplicação é exposta:
+A aplicação é exposta:<br>
 **docker compose:** usando a porta 5000
 **Kubernetes:** Usando o ingress bare metal na porta 80
 
